@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  batch:
+    container_name: mecab-golang
+    build:
+      context: .
+      dockerfile: mecab.dockerfile
+      args:
+        - POSTGRES_HOST=$POSTGRES_HOST
+        - POSTGRES_DB=$POSTGRES_DB
+        - POSTGRES_USER=$POSTGRES_USER
+        - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+    ports:
+      - $MECAB_PORT:8081
+    tty: true
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./mecab:/go/app
+    command: realize start
+
+  db:
+    container_name: postgres-db
+    build:
+      context: .
+      dockerfile: db.dockerfile
+      args:
+        - POSTGRES_HOST=$POSTGRES_HOST
+        - POSTGRES_DB=$POSTGRES_DB
+        - POSTGRES_USER=$POSTGRES_USER
+        - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+    ports:
+      - $POSTGRES_PORT:5432
+    restart: always
+    volumes:
+      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+        

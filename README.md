@@ -1,2 +1,2 @@
-# mecab-golang
-mecab-golang-postgresql
+
+docker-compose up -d --build

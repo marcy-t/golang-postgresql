@@ -1,0 +1,4 @@
+id,name,group_id,user_id,created_at,job_finished_at,state,auto_flg
+1,sample_JICFS1,1,1,2019-08-15 07:20:36.763358,,New,true
+2,sample_MMM1,1,1,2019-08-15 07:20:44.813450,,New,true
+3,sample_MMM2,1,1,2019-08-15 07:20:44.813450,,New,true
