@@ -15,14 +15,16 @@ ENV POSTGRES_PASSWORD $POSTGRES_PASSWORD
 WORKDIR /go/app
 COPY ./mecab /go/app
 
-RUN apk --no-cache update && \ 
+RUN apk --no-cache update && \
     apk add git && \
+    apk add gcc && \
 #    go build -o app
     go build -o app && \
     go get -u github.com/oxequa/realize && \
-    go get -u github.com/jinzhu/gorm && \
-    go get -u github.com/vertica/vertica-sql-go && \
     go get -u github.com/lib/pq
+
+
+
 
 #CMD go run main.go
 

@@ -1,7 +1,7 @@
 package db
 
 import (
-	"app/query"
+//	"app/query"
 
 	"database/sql"
 	_ "github.com/lib/pq"
@@ -17,10 +17,17 @@ var (
 	err error
 )
 
+/*
+type App struct {
+	DB  *sql.DB
+	err error
+}
+ */
+
 func Init () *sql.DB{
 	//Initialize db from the main function
-	//HOST := "postgres-db"
-	HOST := os.Getenv("POSTGRES_HOST")
+	HOST := "postgres-db"
+	//HOST := os.Getenv("POSTGRES_HOST")
 	DATABASE := os.Getenv("POSTGRES_DB")
 	USER     := os.Getenv("POSTGRES_USER")
 	PASSWORD := os.Getenv("POSTGRES_PASSWORD")
@@ -42,6 +49,7 @@ func Init () *sql.DB{
 	return DB
 }
 
+/*
 func SesUpdateProcessing() string{
 	//a:=query.SelectSQL(DB)
 	sesUpProcess:=query.SelectJobState(DB)
@@ -55,6 +63,7 @@ func SesSegment() string{
 	return sesSegments
 }
 
+ */
 
 
 

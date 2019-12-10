@@ -3,6 +3,7 @@ module app
 go 1.12
 
 require (
+	github.com/bluele/mecab-golang v0.0.0-20180831023624-c8cfe04e87f9 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
