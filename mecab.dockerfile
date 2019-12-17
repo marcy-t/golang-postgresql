@@ -18,13 +18,13 @@ COPY ./mecab /go/app
 RUN apk --no-cache update && \
     apk add git && \
     apk add gcc && \
-#    go build -o app
-    go build -o app && \
     go get -u github.com/oxequa/realize && \
-    go get -u github.com/lib/pq
-
-
-
+    :
+#    set -x && \
+#        cd /go/app && \
+#        $(test -f /app/go.mod || go mod init app) && \
+#        go mod download && \
+#    :
 
 #CMD go run main.go
 

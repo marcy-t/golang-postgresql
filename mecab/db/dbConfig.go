@@ -26,8 +26,8 @@ type App struct {
 
 func Init () *sql.DB{
 	//Initialize db from the main function
-	HOST := "postgres-db"
-	//HOST := os.Getenv("POSTGRES_HOST")
+	//HOST := "postgres-db"
+	HOST := os.Getenv("POSTGRES_HOST")
 	DATABASE := os.Getenv("POSTGRES_DB")
 	USER     := os.Getenv("POSTGRES_USER")
 	PASSWORD := os.Getenv("POSTGRES_PASSWORD")
