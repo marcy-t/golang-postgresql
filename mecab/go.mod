@@ -14,6 +14,7 @@ require (
 	github.com/oxequa/interact v0.0.0-20171114182912-f8fb5795b5d7 // indirect
 	github.com/oxequa/realize v2.0.2+incompatible // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
+	github.com/shogo82148/go-mecab v0.0.2 // indirect
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7 // indirect
 	gopkg.in/urfave/cli.v2 v2.0.0-20190806201727-b62605953717 // indirect

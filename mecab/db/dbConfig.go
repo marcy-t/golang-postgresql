@@ -49,6 +49,7 @@ func Init () *sql.DB{
 	return DB
 }
 
+
 /*
 func SesUpdateProcessing() string{
 	//a:=query.SelectSQL(DB)
@@ -56,6 +57,10 @@ func SesUpdateProcessing() string{
 	//fmt.Println(a)
 	return sesUpProcess
 }
+
+ */
+
+/*
 
 func SesSegment() string{
 	sesSegments:=query.SelectSegments(DB)

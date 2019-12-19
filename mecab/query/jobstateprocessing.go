@@ -73,29 +73,6 @@ func SelectJobState(db *sql.DB) string{
 		//fmt.Println(&rep.State, rep.State)
 		//fmt.Printf("%T", rep)
 
-
-		//jobsId=append(jobsId, &rep.Id, &rep.Name)
-		/*
-			ここにVertic　Insert処理
-		*/
-
-		/***
-		  Update to State　Processing
-		*/
-
-		/**
-		DebugCode
-		*/
-		time.Sleep(2 * time.Second)
-		UpdateJobState(db, rep.JobsId)
-		fmt.Println(rep)
-
-		/**
-		DebugCode
-		*/
-		//time.Sleep(2 * time.Second)
-		//UpdateJobDone(db, rep.JobsId)
-
 	}
 
 
