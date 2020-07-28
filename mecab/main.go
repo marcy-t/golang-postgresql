@@ -19,7 +19,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
   fmt.Println("----- End jobstate -----")
   //fmt.Println(rows)
 
-  fmt.Fprint(w, "SelectJobStatus)
+  fmt.Fprint(w, "SelectJobStatus")
 }
 
 
