@@ -14,7 +14,7 @@ var (
 
 func hello(w http.ResponseWriter, r *http.Request) {
 
-  fmt.Fprintf(w, "Hello, World")
+  fmt.Fprintf(w, "Hello, World hogeho")
 
   fmt.Println("----- End jobstate -----")
   //fmt.Println(rows)
